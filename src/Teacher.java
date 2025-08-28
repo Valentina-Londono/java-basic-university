@@ -26,7 +26,7 @@ public abstract class Teacher {
     public abstract double calculateSalary();
 
     public void fullPrint(){
-        System.out.println("Name: " + getName() + " Salary: " + calculateSalary());
+        System.out.println("Name: " + getName() + "\n" + "Salary: " + calculateSalary());
     }
 
     public void print(){

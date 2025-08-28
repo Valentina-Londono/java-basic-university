@@ -34,6 +34,6 @@ public class Student {
     }
 
     public void print(){
-        System.out.println("Id: " + getId() + "Name: " + getName() + "Age: " + getAge());
+        System.out.println("Id: " + getId() + " | " + " Name: " + getName() + "\n" + "         Age: " + getAge());
     }
 }

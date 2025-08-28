@@ -46,17 +46,21 @@ public class Class {
     }
 
     public void print(){
-        System.out.println("Class Name: " + this.name + " Classroom: " + this.classroom);
+        System.out.println("Class Name: " + this.name + "\n" + "   Classroom: " + this.classroom);
     }
 
     public void fullPrint(){
-        System.out.println("Class Name: " + this.name + " Classroom: " + this.classroom);
-        System.out.print("Assigned Teacher: ");
+        System.out.println("------------------------------------------------------");
+        System.out.println("Class Name: " + this.name + "  |  " + " Classroom: " + this.classroom);
+        System.out.print("Assigned Teacher ");
         getTeacher().print();
         System.out.println("------------------------------------------------------");
         for (Student s: students){
             s.print();
         }
+        System.out.println("------------------------------------------------------");
+        System.out.println("Total Students: " + students.size());
+        System.out.println("------------------------------------------------------\n");
     }
 
     public Student getStudentById(int id){
