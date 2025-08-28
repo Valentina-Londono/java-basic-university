@@ -77,13 +77,16 @@ public class Main {
         System.out.println("Welcome to the Universidad del Valle");
         boolean exit = false;
         while (!exit) {
-            System.out.println("# Select an option:\n" +
-                    "1. List of teachers\n" +
+            System.out.println("\n===================================");
+            System.out.println("          Univalle  Menu");
+            System.out.println("===================================");
+            System.out.print("1. List of teachers\n" +
                     "2. List of classes\n" +
                     "3. Create a new student\n" +
                     "4. Create a new class\n" +
-                    "5. Search the classes for student\n" +
-                    "6. Salir\n");
+                    "5. Search for classes in which a student is enrolled\n" +
+                    "6. Exit\n" +
+                    "\n# Select an option: ");
 
             Scanner input = new Scanner(System.in);
             int opc = input.nextInt();
@@ -91,12 +94,12 @@ public class Main {
 
             switch (opc) {
                 case 1:
-                    System.out.println("* . + List of Teachers . + *");
+                    System.out.println("\n* . + List of Teachers . + *");
                     univalle.printTeacher();
                     break;
 
                 case 2:
-                    System.out.println("Select a class to see more information");
+                    System.out.println("\nSelect a class to see more information");
                     univalle.printClasses();
                     int choice =  input.nextInt();
                     input.nextLine();
@@ -108,7 +111,7 @@ public class Main {
                 case 3:
                     int id = students.size() + 1;
 
-                    System.out.print("Student name: ");
+                    System.out.print("\nStudent name: ");
                     String name = input.nextLine();
 
                     System.out.print("Student age: ");
@@ -130,7 +133,7 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.print("Class name: ");
+                    System.out.print("\nClass name: ");
                     String className = input.nextLine();
                     System.out.print("Classroom: ");
                     String classroom = input.nextLine();
@@ -177,25 +180,30 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.println("Type the student ID: ");
+                    System.out.print("\nType the student ID: ");
                     int id2 =  input.nextInt();
                     input.nextLine();
 
-                    ArrayList<Class> classes2 = new ArrayList<>();
+                    System.out.println("\nList of classes in which the student " + id2 + " is enrolled");
 
-                    System.out.println("List of classes in which the student " + id2 + " is enrolled");
+                    int k = 1;
 
                     for(Class c : classes){
                         for (Student s : c.getStudents()){
                             if(s.getId() == id2){
-                                classes2.add(c);
+                                System.out.println("-----------------------------------");
+                                System.out.print(k + ". ");
                                 c.print();
+                                k++;
                             }
                         }
                     }
+                    System.out.println("-----------------------------------");
+                    break;
 
                 case 6:
                     exit = true;
+                    System.out.println("\nThank you for using our program! :)");
 
 
 
