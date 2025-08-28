@@ -36,11 +36,13 @@ public class University {
     }
 
     public void printTeacher(){
-        System.out.println("* . + List of Teachers . + *");
+        int j = 1;
         System.out.println("------------------------------------------------");
         for (Teacher t: teachers){
+            System.out.print(j + ". ");
             t.fullPrint();
             System.out.println("------------------------------------------------");
+            j++;
         }
     }
 
@@ -52,6 +54,13 @@ public class University {
             c.print();
             System.out.println("------------------------------------------------");
             i++;
+        }
+    }
+
+    public void printStudents(){
+        for (Student s: students){
+            System.out.println("----------------------------------------------");
+            s.print();
         }
     }
 

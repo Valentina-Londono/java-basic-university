@@ -91,6 +91,7 @@ public class Main {
 
             switch (opc) {
                 case 1:
+                    System.out.println("* . + List of Teachers . + *");
                     univalle.printTeacher();
                     break;
 
@@ -107,10 +108,10 @@ public class Main {
                 case 3:
                     int id = students.size() + 1;
 
-                    System.out.println("Student name: ");
+                    System.out.print("Student name: ");
                     String name = input.nextLine();
 
-                    System.out.println("Student age: ");
+                    System.out.print("Student age: ");
                     int age = input.nextInt();
                     input.nextLine();
 
@@ -126,6 +127,80 @@ public class Main {
                     choiceClass2.getStudents().add(st);
 
                     System.out.println("The student has been added to the class " + choiceClass2.getName());
+                    break;
+
+                case 4:
+                    System.out.print("Class name: ");
+                    String className = input.nextLine();
+                    System.out.print("Classroom: ");
+                    String classroom = input.nextLine();
+
+                    System.out.println("Choose a teacher");
+                    univalle.printTeacher();
+                    int choice3 =  input.nextInt();
+                    input.nextLine();
+                    Teacher chooseTeacher = univalle.getTeachers().get(choice3 - 1);
+
+                    System.out.println("Choose students. Type 0 for stop");
+                    univalle.printStudents();
+
+                    ArrayList<Student> newSt = new ArrayList<>();
+
+                    for (int i = 0; i <= univalle.getStudents().size(); i++) {
+                        System.out.println("Select the student #" + (i + 1));
+                        int choice4 =  input.nextInt();
+                        input.nextLine();
+
+                        if (choice4 == 0) {
+                            break;
+                        }
+
+                        Student selectedStudent = univalle.getStudents().get(choice4 - 1);
+
+                        boolean exists = false;
+
+                        for (Student n : newSt) {
+                            if (n.getId() == selectedStudent.getId()) {
+                                System.out.println("The student already exists in the class");
+                                exists = true;
+                                break;
+                            }
+                        }
+                        if (!exists) {
+                            newSt.add(selectedStudent);
+                        }
+                    }
+
+                    Class cl = new Class(className, classroom, newSt, chooseTeacher);
+                    classes.add(cl);
+                    System.out.println("The class has been created!");
+                    break;
+
+                case 5:
+                    System.out.println("Type the student ID: ");
+                    int id2 =  input.nextInt();
+                    input.nextLine();
+
+                    ArrayList<Class> classes2 = new ArrayList<>();
+
+                    System.out.println("List of classes in which the student " + id2 + " is enrolled");
+
+                    for(Class c : classes){
+                        for (Student s : c.getStudents()){
+                            if(s.getId() == id2){
+                                classes2.add(c);
+                                c.print();
+                            }
+                        }
+                    }
+
+                case 6:
+                    exit = true;
+
+
+
+
+
             }
         }
 
