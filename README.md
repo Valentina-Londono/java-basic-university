@@ -1,4 +1,4 @@
-# University Management System
+# * . + University Management System + . *
 
 This is my **final project** for the **Basic Java Class** in the QC Studio.
 The goal is to create a small console application where I apply the most important concepts of **Object-Oriented Programming (OOP)**.
@@ -68,5 +68,4 @@ Then the user can interact with a **menu** that allows:
 ## ✨ Author
 
 **Valentina Londoño Dueñas**
-Basic Java Class – Final Project
 
