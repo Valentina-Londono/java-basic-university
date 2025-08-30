@@ -3,6 +3,9 @@
 This is my **final project** for the **Basic Java Class** in the QC Studio.
 The goal is to create a small console application where I apply the most important concepts of **Object-Oriented Programming (OOP)**.
 
+
+## UML
+
 <img width="569" height="514" alt="um drawio (1)" src="https://github.com/user-attachments/assets/67634004-48fa-4b57-8c48-c7435bd06b40" />
 
 ---
