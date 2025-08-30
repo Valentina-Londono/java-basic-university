@@ -62,17 +62,4 @@ public class Class {
         System.out.println("Total Students: " + students.size());
         System.out.println("------------------------------------------------------\n");
     }
-
-    public Student getStudentById(int id){
-        Student student = null;
-        for (Student s: students){
-            if (s.getId() == id){
-                student = s;
-            }
-        }
-        if  (student == null){
-            System.out.println("Student with id " + id + " not found");
-        }
-        return student;
-    }
 }
