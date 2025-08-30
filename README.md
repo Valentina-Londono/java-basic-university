@@ -6,7 +6,7 @@ The goal is to create a small console application where I apply the most importa
 
 ## UML
 
-<img width="569" height="514" alt="um drawio (1)" src="https://github.com/user-attachments/assets/67634004-48fa-4b57-8c48-c7435bd06b40" />
+<img width="469" height="414" alt="um drawio (1)" src="https://github.com/user-attachments/assets/67634004-48fa-4b57-8c48-c7435bd06b40" />
 
 ---
 
