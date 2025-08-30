@@ -3,7 +3,6 @@
 This is my **final project** for the **Basic Java Class** in the QC Studio.
 The goal is to create a small console application where I apply the most important concepts of **Object-Oriented Programming (OOP)**.
 
----
 
 ## UML
 
